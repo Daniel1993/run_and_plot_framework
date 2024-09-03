@@ -1,0 +1,90 @@
+spins 99999
+
+FLUSH_LAT = 0
+PROFILE_FILE = "prof.txt"
+ERROR_FILE = "err.txt"
+PINNING is set to 0 /* 0 = CPU/NUMA/SMT | 1 = CPU/SMT/NUMA | 2 = SMT/CPU/NUMA */
+LOG_REPLAY_STATS_FILE = replay_log_stats
+MALLOC_STATS_FILE = malloc_stats
+NB_REPLAYERS = 0
+usePCWM is set
+DISABLE_LOG_REPLAY is set
+ --- 
+spins 99999
+
+FLUSH_LAT = 0
+PROFILE_FILE = "prof.txt"
+ERROR_FILE = "err.txt"
+PINNING is set to 0 /* 0 = CPU/NUMA/SMT | 1 = CPU/SMT/NUMA | 2 = SMT/CPU/NUMA */
+LOG_REPLAY_STATS_FILE = replay_log_stats
+MALLOC_STATS_FILE = malloc_stats
+NB_REPLAYERS = 0
+usePCWM is set
+DISABLE_LOG_REPLAY is set
+ --- 
+flush lat 0
+Loading 64 warehouses... num items: 10000034326 ms
+Running with the following parameters for 5 secs: (max warehouses 64)
+	Warehouses         (-w): 64
+	StockLevel ratio   (-s): 0
+	Delivery ratio     (-d): 0
+	Order Status ratio (-o): 95
+	Payment ratio      (-p): 5
+	NewOrder ratio     (-r): 0
+Running... 
+Executed the following txs types:
+	StockLevel : 0.00	0
+	Delivery   : 0.00	0
+	OrderStatus: 0.95	1526690
+	Payment    : 0.05	80234
+	NewOrder   : 0.00	0
+1606924 transactions in 5000 ms = 321379.66 txns/s
+Txs: 1606924
+Total time (secs): 5.000
+Total sum time: 20136022791
+Total commit time: 0
+Total abort-upd time: 18608650
+Total abort-ro time: 717280397
+Total wait time: 0
+Total sus time: 0
+Total flush time: 50853448
+Total dur_commit time: 24435301
+Total RO_dur_wait time: 15828345
+Total upd tx time: 47531820
+Total RO tx time: 1368404117
+Total commits: 1606924
+	Non-tx commits: 0
+	HTM commits:  1606924
+	ROT commits:  0
+	GL commits: 0
+	STM commits:  0
+Total aborts: 888
+	HTM conflict aborts:  25
+		HTM self aborts:  0
+		HTM trans aborts:  4
+		HTM non-trans aborts:  21
+	HTM user aborts :  852
+	HTM capacity aborts:  11
+		HTM persistent aborts:  0
+	HTM other aborts:  0
+	ROT conflict aborts:  0
+		ROT self aborts:  0
+		ROT trans aborts:  0
+		ROT non-trans aborts:  0
+		ROT other conflict aborts:  0
+	ROT user aborts:  0
+	ROT capacity aborts:  0
+		ROT persistent aborts:  0
+	ROT other aborts:  0
+Emulated PM latency: 70
+ro_durability_wait_spins: 0
+stats_nbSuccess: 1607561 (99.944786%)
+stats_nbAbort: 888 (0.055271%)
+	confl: 0 (0.112486%)
+	capac: 11 (1.349831%)
+	expli: 852 (95.950508%)
+	other: 0 (0.112486%)
+stats_nbFallback: 0 (0.000062%)
+THREADS	TIME	NB_HTM_SUCCESS	NB_FALLBACK	NB_ABORTS	NB_CONFL	NB_CAPAC	NB_EXPLI	NB_OTHER
+1	5.000080	1607561	0	888	0	11	852	0
+0 
